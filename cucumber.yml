@@ -1,0 +1,22 @@
+default:
+  requireModule:
+    - ts-node/register
+  require:
+    - src/support/world/CustomWorld.ts
+    - src/support/hooks/UIHooks.ts
+    - src/support/hooks/APIHooks.ts
+    - src/step-definitions/**/*.ts
+  paths:
+    - src/features/**/*.feature
+  format:
+    - progress-bar
+    - html:test-output/cucumber-report.html
+    - json:test-output/cucumber-report.json
+  formatOptions:
+    snippetInterface: async-await
+  worldParameters:
+    headless: false
+    browser: chromium
+    baseUrl: https://www.labcorp.com
+    apiBaseUrl: https://echo.free.beeceptor.com
+    defaultTimeout: 30000

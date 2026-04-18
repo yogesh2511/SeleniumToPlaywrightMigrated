@@ -1,0 +1,10 @@
+node_modules/
+dist/
+test-output/
+.env.local
+*.log
+
+# Playwright specific
+playwright-report/
+test-results/
+blob-report/
